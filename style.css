@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+/* navbar Start */
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    background-color: rgb(237 231 222 / 91%);
+    box-shadow: 0px 0 6px;
+    z-index: 12;
+
+}
+
+.left-icon h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    margin: 22px 10px;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.nav-item {
+    margin: 10px 10px;
+}
+
+
+.nav-item a {
+    text-decoration: none;
+    color: black    ;
+}
+
+
+#navbar ul li {
+    font-size: 15px;
+    margin: 10px 25px;
+    font-weight: bold;
+
+}
+
+#cart {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 25px;
+
+}
+   
+#cart a{
+    text-decoration: none;
+    color: black;
+
+
+}
+/* home */
+
+#home {
+    margin: auto;
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 165px;
+    margin-bottom: 135px;
+
+}
+
+.home-heading h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 4rem;
+    padding: 33px 0px
+}
+
+.home-para {
+    font-size: 23px;
+    color: rgb(94, 94, 94);
+}
+
+/* blogs section */
+#blog-section {
+    margin: 104px;
+
+}
+
+#blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    justify-items: center;
+    cursor: pointer;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    max-width: 580px;
+    border-radius: 41px 2px;
+
+
+}
+
+.blog-item:hover {
+    transition-duration: 0.3;
+    box-shadow: 2px 2px 6px;
+}
+
+
+.blog-image {
+    border-radius: 41px 2px 2px 2px;
+    width: 580px;
+    height: 325px;
+
+}
+
+
+
+.blog-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Playfair Display', serif;
+    margin: 0 3px;
+}
+
+.blog-title h3 {
+    font-size: 25px;
+    margin: 5px 0px;
+    margin-bottom: 10px;
+}
+
+.blog-title p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    margin: 0;
+    color: rgb(140 140 140);
+}
+
+
+
+
+/* info */
+
+.ex-info {
+    display: flex;
+    margin: 160px 0px;
+    padding: 20vh 50px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(212 202 186);
+    align-items: center;
+}
+
+.info-img img {
+    border: 45px solid rgb(182 168 144);
+    width: 420px;
+    height: 521px;
+}
+
+
+
+.info-left {
+    padding: 15px 87px;
+    width: 289px;
+    position: relative;
+    right: 134px;
+    margin: 25px 119px;
+}
+
+.info-right div p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* footer */
+
+
+footer {
+    display: grid;
+    justify-items: center;
+    background-color: rgb(212 202 186);
+}
+
+.sub-note h3 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 29px;
+}
+
+#email-input input {
+    margin: 0;
+    padding: 10px 10px;
+    width: 315px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(216 213 209);
+}
+
+#email-input {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+#email-input label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 2px 2px;
+    font-size: 26px;
+
+    
+}
+/* utilitiy */
+.btn-sub {
+    display: flex;
+    align-items: center;
+    margin: 28px auto;
+    padding: 17px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
+    border: 1.5px solid black;
+
+}
