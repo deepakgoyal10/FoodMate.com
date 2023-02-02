@@ -5,378 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1140px)" href="phone.css">
     <title>FoodMate</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Playfair Display', serif;
-
-
-        }
-
-        .left-icon {
-            /* border: 2px solid green; */
-        }
-
-        .left-icon h1 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-weight: bolder;
-            margin: 22px 10px;
-        }
-
-        .header1 {
-            display: flex;
-            margin: auto;
-            justify-content: center;
-            position: fixed;
-            background-color: white;
-            z-index: 15;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-evenly;
-            list-style: none;
-            width: 100vw;
-            cursor: pointer;
-            box-shadow: 0px 0 6px ;
-        }
-
-        .nav-item {
-            margin: 10px 10px;
-        }
-
-        .navbar ul {
-            display: flex;
-            justify-content: flex-end;
-            list-style: none;
-            /* width: 80vw; */
-            /* border: 2px solid blue; */
-        }
-
-        .navbar ul li {
-            font-size: 15px;
-            margin: 10px 25px;
-            font-weight: bold;
-
-        }
-
-
-        #cart {
-            font-size: 15px;
-            font-weight: bold;
-        }
-
-
-
-        #cart p {
-            width: 100px;
-            margin: 26px 9px;
-            margin-right: 20px;
-
-        }
-
-        .main {
-            margin: auto;
-            display: flex;
-            width: 80vw;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding-top: 165px;
-            margin-bottom: 135px;
-            /* border: 2px solid rgb(122, 228, 122); */
-
-
-
-
-        }
-
-        .heading h1 {
-            font-family: 'Caveat', cursive;
-            font-size: 4rem;
-            padding: 33px 0px
-        }
-
-        .para {
-            font-size: 23px;
-            color: rgb(94, 94, 94);
-        }
-
-        .container {
-            margin: auto;
-            display: flex;
-            max-width: 80vw;
-            justify-content: center;
-        }
-
-        .all-thumb {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .image-thumb {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 50px;
-            max-width: 580px;
-            border-radius: 41px 2px;
-
-
-        }
-
-        .image-thumb:hover{
-            transition-duration: 0.3;
-            box-shadow: 2px 2px 6px;
-        }
-
-
-        .image-thumb1 {
-            border-radius: 41px 2px 2px 2px;
-            width: 580px;
-            height: 325px;
-
-        }
-
-        .img-row1 {
-            margin-right: 60px;
-            margin-bottom: 20px;
-
-
-        }
-
-        .img-row2 {
-            margin-left: 60px;
-            margin-bottom: 20px;
-
-
-        }
-
-        .img-title {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-family: 'Playfair Display', serif;
-            margin: 0 3px;
-        }
-
-        .img-title h3 {
-            font-size: 25px;
-            margin: 5px 0px;
-            margin-bottom: 10px;
-        }
-
-        .img-title p {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 17px;
-            margin: 0;
-            color: rgb(140 140 140);
-        }
-
-        .btn-artical {
-            justify-content: center;
-            align-items: center;
-            font-size: 16px;
-            display: flex;
-            margin: auto;
-            background-color: black;
-            color: white;
-            width: 150px;
-            height: 50px;
-            padding: 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .ex-info {
-            margin: 160px 0px;
-            padding: 20vh 50px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            background-color: rgb(212 202 186);
-            align-items: center;
-        }
-
-        .info-img img {
-            border: 45px solid rgb(182 168 144);
-            width: 420px;
-            height: 521px;
-        }
-
-        .btn-shop {
-            font-size: 16px;
-            margin: 35px auto;
-            background-color: black;
-            color: white;
-            padding: 17px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-
-        }
-
-        .info-right {
-            padding: 15px 87px;
-            width: 289px;
-            position: relative;
-            right: 134px;
-            margin: 25px 119px;
-        }
-
-        .info-right div p {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-        }
-
-
-
-        footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 47px;
-            background-color: rgb(212 202 186);
-        }
-
-        .sub-note h3 {
-            display: flex;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 20px;
-            margin: 29px;
-        }
-
-        .email input {
-            margin: 0;
-            padding: 10px 10px;
-            width: 315px;
-            font-size: 16px;
-            border: none;
-            background-color: rgb(216 213 209);
-        }
-
-        .email h5 {
-            display: flex;
-            justify-content: center;
-
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: lighter;
-            margin: 0px 4px;
-            font-size: 21px;
-        }
-
-        .btn-sub {
-            display: flex;
-            align-items: center;
-            margin: 28px auto;
-            padding: 17px 30px;
-            border-radius: 5px;
-            font-size: 16px;
-            color: white;
-            background-color: black;
-
-        }
-
-        button:hover{
-            background-color: rgb(32, 32, 32);
-            color: rgb(255, 255, 255);
-            border: 1.5px solid black;
-            
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <div class="header1">
-            <nav class="navbar">
-                <div class="left-icon">
-                    <h1>FoodMate</h1>
-                </div>
-                    <ul>
-                        <li class="nav-item">Blog</li>
-                        <li class="nav-item">Shop</li>
-                        <li class="nav-item">About</li>
-                        <li class="nav-item">Contact Us</li>
-                    </ul>
-                    <div id="cart">
-                        <p>Bag Weight(0)</p>
-                    </div>
-            </nav>
+    <nav id="navbar">
+        <div class="left-icon">
+            <h1>FoodMate</h1>
         </div>
-    </header>
+        <ul>
+            <li class="nav-item"><a href="#">Blog</a></li>
+            <li class="nav-item"><a href="#">Shop</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item"><a href="#">Contact Us</a></li>
+        </ul>
+        <div id="cart">
+            <a href="#">Bag Weight(0)</a>
+        </div>
+    </nav>
 
-    <div class="main">
-        <div class="heading">
+    <div id="home">
+        <div class="home-heading">
             <h1>Welcome to FoodMate your friend for food </h1>
 
         </div>
-        <div class="para">
+        <div class="home-para">
             <p>Learn new delicious recipes daily </p>
         </div>
     </div>
-    <div class="container">
-        <div class="all-thumb">
 
+    <section id="blog-section">
+        <div id="blog">
 
-            <div class="img-row1">
-                <div class="image-thumb">
-                    <img class="image-thumb1" src="foodmate images/image2.jpg" alt="">
-                    <div class="img-title">
-                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
-                            velit neque aliquid?</p>
-                    </div>
+            <div class="blog-item">
+                <img class="blog-image" src="foodmate images/image2.jpg" alt="">
+                <div class="blog-title">
+                    <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
+                        velit neque aliquid?</p>
                 </div>
-                <div class="image-thumb">
-                    <img class="image-thumb1" src="foodmate images/image3.jpg" alt="">
-                    <div class="img-title">
-                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
-                            velit neque aliquid?</p>
-                    </div>
-
+            </div>
+            <div class="blog-item">
+                <img class="blog-image" src="foodmate images/image3.jpg" alt="">
+                <div class="blog-title">
+                    <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
+                        velit neque aliquid?</p>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img class="blog-image" src="foodmate images/image6.jpg" alt="">
+                <div class="blog-title">
+                    <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
+                        velit neque aliquid?</p>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img class="blog-image" src="foodmate images/image5.jpg" alt="">
+                <div class="blog-title">
+                    <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
+                        velit neque aliquid?</p>
                 </div>
             </div>
 
-
-            <div class="img-row2">
-                <div class="image-thumb">
-                    <img class="image-thumb1" src="foodmate images/image6.jpg" alt="">
-                    <div class="img-title">
-                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
-                            velit neque aliquid?</p>
-                    </div>
-
-                </div>
-                <div class="image-thumb">
-                    <img class="image-thumb1" src="foodmate images/image5.jpg" alt="">
-                    <div class="img-title">
-                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas praesentium nihil
-                            velit neque aliquid?</p>
-                    </div>
-
-                </div>
-            </div>
         </div>
-    </div>
-    <button class="btn-artical">More artical</button>
+        <button class="btn-sub">More artical</button>
+    </section>
 
     <div class="ex-info">
-        <div class="info-right">
+        <div class="info-left">
             <div>
                 <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nisi laboriosam suscipit sit?</p>
             </div>
-            <button class="btn-shop">Go to shop</button>
+            <button class="btn-sub">Go to shop</button>
         </div>
         <div class="info-img">
             <img src="foodmate images/image7.jpg" alt="">
@@ -387,14 +94,17 @@
             <div class="sub-note">
                 <h3>Subscribe for daily update</h3>
             </div>
-            <div class="email">
-                <h5>Email address</h5>
-                <input type="email" placeholder="example123@gmail.com">
-            </div>
+                <form  id="email-input" action=".php">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="example123@gmail.com">
+                </form>
+            
             <button class="btn-sub">Subscribe</button>
         </div>
+        <div>
+            Developed by <a href="deepakgoyal1886@gmail.com">Deepak goyal</a> |Copyright &copy; www.foodmate.com
+        </div>
     </footer>
-    Developed by <a href="deepakgoyal1886@gmail.com">Deepak goyal</a> |Copyright &copy; WWW.foodmate.com All rights reserved!
 </body>
 
 </html>
